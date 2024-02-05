@@ -3,8 +3,6 @@ from firebase_admin import firestore, credentials
 
 class Firebase:
 
-    
-
     def __init__(self) -> None:
         # Add credentials to make connection
         cred = credentials.Certificate("smithathletes-d8741-firebase-adminsdk-snc4k-3e47fd0006.json")
