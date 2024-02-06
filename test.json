@@ -1,0 +1,20 @@
+[
+    {
+      "Unique id": 1,
+      "First Name": "Steve ",
+      "Sport": "Football",
+      "Birthdate": "May 12, 1979",
+      "Team": "Baltimore Ravens",
+      "Championship": 0,
+      "Death Date": ""
+    },
+    {
+      "Unique id": 2,
+      "First Name": "Alex",
+      "Sport": "Football",
+      "Birthdate": "May 7, 1984",
+      "Team": "Washington Commanders",
+      "Championship": 0,
+      "Death Date": ""
+    }
+]
