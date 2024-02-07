@@ -1,5 +1,7 @@
 import Firebase
 
-firebase = Firebase
+firebase = Firebase.Firebase1()
 
-print(firebase.retrieveAllData())
+# print(firebase.retrieveAllData())
+
+print(firebase.processQuery())

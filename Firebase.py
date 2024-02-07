@@ -1,7 +1,7 @@
 import firebase_admin # if gettting error run in cmd: pip3 install firebase_admin
 from firebase_admin import firestore, credentials
 
-class Firebase:
+class Firebase1:
 
     def __init__(self) -> None:
         # Add credentials to make connection
@@ -18,6 +18,18 @@ class Firebase:
     def retrieveAllData(self):
         # document_data = collection_ref.document('your_document_id').get().to_dict()
         print(self.collection_ref.get())
+
+    def processQuery(self):
+
+        # Test with 'Sport == Football'
+        docs = (
+            self.db.collection("SmithAthletes")
+            .where("Sport", "==", "Football")
+            .stream()
+        )
+
+        for doc in docs:
+            print(f"{doc.id} => {doc.to_dict()}")
 
 
 
