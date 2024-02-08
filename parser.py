@@ -11,10 +11,11 @@ def parseQuery(query_string):
     #parse the query
     parsed_query = sentence_parser.parseString(query_string)
 
+
     return parsed_query
 
 if __name__ == "__main__":
-    query = '-> firstName == Ryan'
+    query = input('Enter query:')
 
     #parse the query separated a the spaces
     result = parseQuery(query)
