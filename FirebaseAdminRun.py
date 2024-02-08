@@ -27,6 +27,5 @@ for item in smithAthletes:
     doc_ref.set(item)
 
 
-# Guessing from here we parse json and upload to firebase in a loop?
 
 
