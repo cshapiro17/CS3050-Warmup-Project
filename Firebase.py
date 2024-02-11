@@ -1,6 +1,8 @@
 import firebase_admin # if gettting error run in cmd: pip3 install firebase_admin
 from firebase_admin import firestore, credentials
 
+COLLECTION = 'SmithAthletes'
+
 class Firebase:
 
     def __init__(self) -> None:
@@ -10,18 +12,20 @@ class Firebase:
 
         # Works on SmithAthlete collection, can change later if collections are added
         self.db = firestore.client()
-        self.collection_ref = self.db.collection('SmithAthletes')
+        self.collection_ref = self.db.collection(COLLECTION)
 
     def connect(self):
         pass
         
     def retrieve_all_data(self):
-        # document_data = collection_ref.document('your_document_id').get().to_dict()
-        print(self.collection_ref.get())
+         return self.collection_ref.get()
 
     def process_query(self, parsed_query):
 
         keyword = parsed_query[0]
+
+        if (not self.verify_keyword(keyword)):
+            return "Column name not found."
 
         if len(parsed_query) == 1:
             if keyword == "help":
@@ -33,8 +37,11 @@ class Firebase:
             filter_by = parsed_query[1]
             attribute = parsed_query[2]
 
+            if (not self.verify_filter(filter_by)):
+                return "Unknown operator."
+        
             docs = (
-                self.db.collection("SmithAthletes")
+                self.db.collection(COLLECTION)
                 .where(keyword, filter_by, attribute)
                 .stream()
             )
@@ -73,6 +80,39 @@ class Firebase:
         user_input = input("->  ")
 
         return user_input
+    
+    def get_column_titles(self):
+        # Pull data from firebase
+        docs = self.retrieve_all_data()
+
+        column_dict = dict()
+        for item in docs:
+            column_dict = item.to_dict()
+            break
+
+        columns = []
+        for key, _ in column_dict.items():
+            columns.append(key)
+        
+        return columns
+    
+    def verify_keyword(self, keyword):
+        columns = self.get_column_titles()
+        
+        if (keyword in columns):
+            return True
+        
+        return False    
+        
+    def verify_filter(self, filter_by):
+        valid_filter = ["<", "<=", "==", '>', '>=', '!=', 'array-contains', 'array-contains-any', 'in', 'not-in']
+
+        if (filter_by in valid_filter):
+            return True
+        return False
+        
+
+        
             
 
 

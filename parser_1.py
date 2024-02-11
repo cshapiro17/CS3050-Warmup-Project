@@ -22,6 +22,17 @@ class Parser:
         parsed_query = sentence_parser.parseString(query_string)
 
         return parsed_query
+    
+    def double_quote(self, query_string):
+        # check double quote is in
+        # double_quote_string = ""
+        # if (query_string.contains('"')):
+        #     for char in query_string:
+        #         if (char == '"'):
+        #             double_quote_string += char
+        
+        pass 
+
 
     def execute_query(self, parsed_query): 
         '''
@@ -39,3 +50,5 @@ class Parser:
         the query
         '''
         print('getData')
+
+    
