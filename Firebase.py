@@ -22,8 +22,6 @@ class Firebase:
     def process_query(self, parsed_query):
 
         keyword = parsed_query[0]
-        filter_by = parsed_query[1]
-        attribute = parsed_query[2]
 
         if len(parsed_query) == 1:
             if keyword == "help":
@@ -31,12 +29,10 @@ class Firebase:
 
                 return message
 
-            elif keyword == "quit":
-                message = "quit"
+        if len(parsed_query) == 3:
+            filter_by = parsed_query[1]
+            attribute = parsed_query[2]
 
-                return message
-
-        if len(parsed_query) == 3: 
             docs = (
                 self.db.collection("SmithAthletes")
                 .where(keyword, filter_by, attribute)
@@ -61,8 +57,6 @@ class Firebase:
 
                 # Append to the list
                 list.append(list_item)
-
-            print(list)
 
             # Print items back to the user
             for i in range(len(list) - 1):
