@@ -19,34 +19,62 @@ class Firebase:
         # document_data = collection_ref.document('your_document_id').get().to_dict()
         print(self.collection_ref.get())
 
-    def process_query(self,keyword, filter_by, attribute):
+    def process_query(self, parsed_query):
 
-        # Test with 'Sport == Football'
-        docs = (
-            self.db.collection("SmithAthletes")
-            .where(keyword, filter_by, attribute)
-            .stream()
-        )
+        keyword = parsed_query[0]
+        filter_by = parsed_query[1]
+        attribute = parsed_query[2]
 
-        # Create a list to hold values
-        list = []
+        if len(parsed_query) == 1:
+            if keyword == "help":
+                message = "This is a help message"
 
-        for doc in docs:
+                return message
 
-            # Get the filtered items in a dictionary
-            results = doc.to_dict()
+            elif keyword == "quit":
+                message = "quit"
 
-            # Only take the first name and append "Smith"
-            list_item = results["First Name"] + " Smith"
+                return message
 
-            # Append to the list
-            list.append(list_item)
+        if len(parsed_query) == 3: 
+            # Test with 'Sport == Football'
+            docs = (
+                self.db.collection("SmithAthletes")
+                .where(keyword, filter_by, attribute)
+                .stream()
+            )
 
-        # Print items back to the user
-        for i in range(len(list) - 1):
-            print(list[i] + ", ", end = " "),
+            # Create a list to hold values
+            list = []
 
-        print(list[-1])
+            # Create string to return to user
+            output_string = ""
+
+            for doc in docs:
+
+                # Get the filtered items in a dictionary
+                results = doc.to_dict()
+
+                # Only take the first name and append "Smith"
+                list_item = results["First Name"] + " Smith"
+
+                # Append to the list
+                list.append(list_item)
+
+            
+
+            # Print items back to the user
+            for i in range(len(list) - 1):
+                output_string = output_string + list[i] + ", "
+
+            output_string = output_string + list[-1]
+
+            return output_string
+
+    def get_query_from_user(self):
+        user_input = input("->  ")
+
+        return user_input
             
 
 

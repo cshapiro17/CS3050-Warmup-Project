@@ -1,3 +1,5 @@
+# This file is responsible for uploading the data in the form of a JSON to the firebase
+
 import json
 from Firebase import *
 
