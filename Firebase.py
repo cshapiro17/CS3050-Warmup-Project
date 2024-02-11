@@ -1,7 +1,7 @@
 import firebase_admin # if gettting error run in cmd: pip3 install firebase_admin
 from firebase_admin import firestore, credentials
 
-class Firebase1:
+class Firebase:
 
     def __init__(self) -> None:
         # Add credentials to make connection
@@ -34,15 +34,19 @@ class Firebase1:
         for doc in docs:
 
             # Get the filtered items in a dictionary
-            item = doc.to_dict()
+            results = doc.to_dict()
 
             # Only take the first name and append "Smith"
-            list_item = item["First Name"] + " Smith"
+            list_item = results["First Name"] + " Smith"
 
             # Append to the list
             list.append(list_item)
 
-        print(list)
+        # Print items back to the user
+        for i in range(len(list) - 1):
+            print(list[i] + ", ", end = " "),
+
+        print(list[-1])
             
 
 

@@ -1,6 +1,6 @@
 import Firebase
 
-firebase = Firebase.Firebase1()
+firebase = Firebase.Firebase()
 
 # print(firebase.retrieve_all_data())
 
