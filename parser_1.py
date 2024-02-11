@@ -66,6 +66,8 @@ class Parser:
         # Join the parsed tokens into a single string
         parsed_query = ' '.join(parsed_query)
 
+        print(parsed_query)
+
         return parsed_query
     
     def double_quote(self, query_string):

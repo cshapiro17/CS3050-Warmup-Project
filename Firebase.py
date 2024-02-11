@@ -52,6 +52,39 @@ class Firebase:
             # Create string to return to user
             output_string = ""
 
+            # Handle compound queries
+            if (len(parsed_query) - 3) % 4  == 0:
+                keyword_list = []
+                filter_by_list = []
+                attribute_list = []
+                keyword_index = 0
+                filter_by_index = 1
+                attribute_index = 2
+                '''
+                for item in parsed_query:
+                    if(parsed_query.index(item) % 4 == 0):
+                        keyword_list.append(parsed_query[keyword_index])
+                        keyword_index += 4
+                    if(parsed_query.index(item) % 4 == 1):
+                        filter_by_list.append(parsed_query[filter_by_index])
+                        filter_by_list += 4
+                    if(parsed_query.index(item) % 4 == 2):
+                        attribute_list.append(parsed_query[attribute_index])
+                        attribute_list += 4
+                '''
+                for i in range(int(((len(parsed_query) - 3) / 4) + 1)):
+                    keyword_list.append(parsed_query[keyword_index + (4 * i)])
+                    filter_by_list.append(parsed_query[filter_by_index + (4 * i)])
+                    attribute_list.append(parsed_query[attribute_index + (4 * i)])
+                print(keyword_list)
+                print(filter_by_list)
+                print(attribute_list)
+                get = "(self.db.collection('SmithAthletes')"
+                for i in range(int(((len(parsed_query) - 3) / 4) + 1)):
+                    test_string = ".where(" + keyword_list[i] + ", " + filter_by_list[i] + ", " + attribute_list[i] + ")"
+                    get = get + test_string
+                get = get + ".stream()"
+                
             for doc in docs:
 
                 # Get the filtered items in a dictionary
