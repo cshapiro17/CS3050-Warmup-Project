@@ -5,6 +5,8 @@ import parser_1
 parser = parser_1.Parser()
 
 # print(firebase.retrieve_all_data())
+
+# Test the functionality of the program
 run_program = True
 
 while(run_program == True):

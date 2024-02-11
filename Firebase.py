@@ -37,7 +37,6 @@ class Firebase:
                 return message
 
         if len(parsed_query) == 3: 
-            # Test with 'Sport == Football'
             docs = (
                 self.db.collection("SmithAthletes")
                 .where(keyword, filter_by, attribute)
@@ -55,19 +54,21 @@ class Firebase:
                 # Get the filtered items in a dictionary
                 results = doc.to_dict()
 
+                print(results)
+
                 # Only take the first name and append "Smith"
                 list_item = results["First Name"] + " Smith"
 
                 # Append to the list
                 list.append(list_item)
 
-            
+            print(list)
 
             # Print items back to the user
             for i in range(len(list) - 1):
-                output_string = output_string + list[i] + ", "
+                output_string = output_string + str(list[i]) + ", "
 
-            output_string = output_string + list[-1]
+            output_string = output_string + list[len(list) - 1]
 
             return output_string
 
