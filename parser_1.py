@@ -1,9 +1,10 @@
+from pyparsing import Word, alphas, printables, ZeroOrMore
 
 class Parser:
     def __init__(self):
         print("init")
 
-    def parseQuery(query_string): 
+    def parse_query(self, query_string): 
         '''
         Takes a query string as input
         and parses it into a format that 
@@ -20,10 +21,9 @@ class Parser:
         #parse the query
         parsed_query = sentence_parser.parseString(query_string)
 
-
         return parsed_query
 
-    def executeQuery(self, parsedQuery): 
+    def execute_query(self, parsed_query): 
         '''
         Sends the parsed query to the
         datastore for execution 
@@ -31,7 +31,7 @@ class Parser:
         '''
         print('execute')
 
-    def getData(self, queryResults): 
+    def get_data(self, query_results): 
         '''
         May not need this method
         Takes the information from the firebase and 
