@@ -18,8 +18,7 @@ class Parser:
         quoted_parser = quotedString.setParseAction(lambda t: t[0][1:-1])
 
         #define a parser for one or more words or characters
-        sentence_parser = ZeroOrMore(word_parser | char_parser)
-
+        sentence_parser = ZeroOrMore(word_parser | char_parser | quoted_parser)
         #parse the query
         parsed_query = sentence_parser.parseString(query_string)
 
