@@ -2,6 +2,8 @@ import Firebase
 
 firebase = Firebase.Firebase1()
 
-# print(firebase.retrieveAllData())
+# print(firebase.retrieve_all_data())
 
-print(firebase.processQuery())
+# print(firebase.process_query("Sport", "==", "Football"))
+
+firebase.process_query("Sport", "==", "Football")

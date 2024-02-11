@@ -15,21 +15,35 @@ class Firebase1:
     def connect(self):
         pass
         
-    def retrieveAllData(self):
+    def retrieve_all_data(self):
         # document_data = collection_ref.document('your_document_id').get().to_dict()
         print(self.collection_ref.get())
 
-    def processQuery(self):
+    def process_query(self,keyword, filter_by, attribute):
 
         # Test with 'Sport == Football'
         docs = (
             self.db.collection("SmithAthletes")
-            .where("Sport", "==", "Football")
+            .where(keyword, filter_by, attribute)
             .stream()
         )
 
+        # Create a list to hold values
+        list = []
+
         for doc in docs:
-            print(f"{doc.id} => {doc.to_dict()}")
+
+            # Get the filtered items in a dictionary
+            item = doc.to_dict()
+
+            # Only take the first name and append "Smith"
+            list_item = item["First Name"] + " Smith"
+
+            # Append to the list
+            list.append(list_item)
+
+        print(list)
+            
 
 
 
