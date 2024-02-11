@@ -10,12 +10,12 @@
    },
    {
      "Unique id": 2,
-     "First Name": "Alex",
-     "Sport": "Football",
-     "Birthdate": "May 7, 1984",
-     "Team": "Washington Commanders",
+     "First Name": "Randy",
+     "Sport": "Basketball",
+     "Birthdate": "December 12, 1948",
+     "Team": "Atlanta Hawks",
      "Championship": 0,
-     "Death Date": ""
+     "Death Date": "June 4, 2009"
    },
    {
      "Unique id": 3,
@@ -37,7 +37,7 @@
    },
    {
      "Unique id": 5,
-     "First Name": "Vyncint ",
+     "First Name": "Vyncint",
      "Sport": "Football",
      "Birthdate": "June 9, 1996",
      "Team": "Indianapolis Colts",
@@ -46,7 +46,7 @@
    },
    {
      "Unique id": 6,
-     "First Name": "Tyron ",
+     "First Name": "Tyron",
      "Sport": "Football",
      "Birthdate": "December 12, 1990",
      "Team": "Dallas Cowboys",
@@ -55,7 +55,7 @@
    },
    {
      "Unique id": 7,
-     "First Name": "Tyreke ",
+     "First Name": "Tyreke",
      "Sport": "Football",
      "Birthdate": "February 14, 2000",
      "Team": "Arizona Cardinals ",
@@ -100,7 +100,7 @@
    },
    {
      "Unique id": 12,
-     "First Name": "Roquan ",
+     "First Name": "Roquan",
      "Sport": "Football",
      "Birthdate": "April 8, 1997",
      "Team": "Baltimore Ravens",
@@ -127,7 +127,7 @@
    },
    {
      "Unique id": 15,
-     "First Name": "JR ",
+     "First Name": "JR",
      "Sport": "Basketball",
      "Birthdate": "September 9, 1985",
      "Team": "Los Angeles Lakers",
@@ -154,8 +154,8 @@
    },
    {
      "Unique id": 18,
-     "First Name": "dennis ",
-     "Sport": "football",
+     "First Name": "Dennis",
+     "Sport": "Football",
      "Birthdate": "Feb 3 1959",
      "Team": "Denver Broncos",
      "Championship": null,
@@ -163,8 +163,8 @@
    },
    {
      "Unique id": 19,
-     "First Name": "Robby ",
-     "Sport": "Wrestling ",
+     "First Name": "Robby",
+     "Sport": "Wrestling",
      "Birthdate": "01/30/1987",
      "Team": "USA",
      "Championship": 0,
@@ -172,16 +172,16 @@
    },
    {
      "Unique id": 20,
-     "First Name": "bubba ",
-     "Sport": "football",
+     "First Name": "Bubba",
+     "Sport": "Football",
      "Birthdate": "02/28/1945",
-     "Team": "michigan state university ",
+     "Team": "Michigan State University ",
      "Championship": null,
      "Death Date": "08/03/2011"
    },
    {
      "Unique id": 21,
-     "First Name": "Mark ",
+     "First Name": "Mark",
      "Sport": "Baseball",
      "Birthdate": "May 7, 1970",
      "Team": "Milwaukee Brewers",
@@ -190,7 +190,7 @@
    },
    {
      "Unique id": 22,
-     "First Name": "David ",
+     "First Name": "David",
      "Sport": "Volleyball",
      "Birthdate": "May 15, 1985",
      "Team": "USA",
@@ -208,28 +208,28 @@
    },
    {
      "Unique id": 24,
-     "First Name": "Reggie ",
-     "Sport": "baseball",
+     "First Name": "Reggie",
+     "Sport": "Baseball",
      "Birthdate": "02/04/1945",
-     "Team": "los Angeles dodgers ",
+     "Team": "Los Angeles Dodgers ",
      "Championship": 2,
      "Death Date": ""
    },
    {
      "Unique id": 25,
-     "First Name": "bruce ",
-     "Sport": "football",
+     "First Name": "Bruce",
+     "Sport": "Football",
      "Birthdate": "06/18/1943",
-     "Team": "buffalo bills",
+     "Team": "Buffalo Bills",
      "Championship": 0,
      "Death Date": ""
    },
    {
      "Unique id": 26,
-     "First Name": "Ben ",
+     "First Name": "Ben",
      "Sport": "Football",
      "Birthdate": "June 16, 1911",
-     "Team": "washington redskins",
+     "Team": "Washington Redskins",
      "Championship": 1,
      "Death Date": "February 23, 1941"
    },
@@ -245,46 +245,46 @@
    {
      "Unique id": 28,
      "First Name": "Alex",
-     "Sport": "football",
+     "Sport": "Football",
      "Birthdate": "04/07/1984",
-     "Team": "washington redskins",
+     "Team": "Washington Redskins",
      "Championship": 0,
      "Death Date": ""
    },
    {
      "Unique id": 29,
-     "First Name": "george",
-     "Sport": "rubgy",
-     "Birthdate": "",
-     "Team": "",
-     "Championship": null,
+     "First Name": "Steve",
+     "Sport": "Basketball",
+     "Birthdate": "March 31, 1969",
+     "Team": "Miami Heat",
+     "Championship": 1,
      "Death Date": ""
    },
    {
      "Unique id": 30,
-     "First Name": "Gary ",
-     "Sport": "Soccer",
-     "Birthdate": "December 3, 1968",
-     "Team": "Aylesbury Unite",
+     "First Name": "Josh",
+     "Sport": "Basketball",
+     "Birthdate": "December 5, 1985",
+     "Team": "New Orleans Pelicans",
      "Championship": 0,
      "Death Date": ""
    },
    {
-     "Unique id": 31,
-     "First Name": "davey boy ",
-     "Sport": "wrestilng",
-     "Birthdate": "11/27/1962",
-     "Team": "none ",
-     "Championship": 2,
-     "Death Date": "05/18/2002"
+    "Unique id": 31,
+    "First Name": "Phil",
+    "Sport": "Basketball",
+    "Birthdate": "April 22, 1952",
+    "Team": "Seattle Supersonics",
+    "Championship": 1,
+    "Death Date": "July 29, 2002"
    },
    {
-     "Unique id": 32,
-     "First Name": "Anthony",
-     "Sport": "MMA",
-     "Birthdate": "6/26/1988",
-     "Team": "Mick Doyle's Kickboxing Academy Factory X",
-     "Championship": 0,
-     "Death Date": ""
+    "Unique id": 32,
+    "First Name": "Kenny",
+    "Sport": "Basketball",
+    "Birthdate": "March 8, 1965",
+    "Team": "Denver Nuggets",
+    "Championship": 2,
+    "Death Date": ""
    }
   ]
