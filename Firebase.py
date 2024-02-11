@@ -50,13 +50,16 @@ class Firebase:
                 # Get the filtered items in a dictionary
                 results = doc.to_dict()
 
-                print(results)
-
                 # Only take the first name and append "Smith"
                 list_item = results["First Name"] + " Smith"
 
                 # Append to the list
                 list.append(list_item)
+
+            if len(list) == 0:
+                message = "None"
+
+                return message
 
             # Print items back to the user
             for i in range(len(list) - 1):
