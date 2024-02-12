@@ -33,81 +33,74 @@ class Firebase:
 
                 return message
 
-        if len(parsed_query) == 3:
-            filter_by = parsed_query[1]
-            attribute = parsed_query[2]
+        # Handle queries of any length
+        elif (len(parsed_query) - 3) % 4 == 0:
 
-            if (not self.verify_filter(filter_by)):
-                return "Unknown operator."
-        
-            docs = (
-                self.db.collection(COLLECTION)
-                .where(keyword, filter_by, attribute)
-                .stream()
-            )
+            # Create initial element indicies
+            keyword_index = 0
+            filter_by_index = 1
+            attribute_index = 2
 
-            # Create a list to hold values
-            list = []
+            # Create a list to hold the get data expression components
+            get_list = []
 
-            # Create string to return to user
-            output_string = ""
+            # Add first component to the list
+            get_list.append(f'self.db.collection("{COLLECTION}")')
 
-            # Handle compound queries
-            if (len(parsed_query) - 3) % 4  == 0:
-                keyword_list = []
-                filter_by_list = []
-                attribute_list = []
-                keyword_index = 0
-                filter_by_index = 1
-                attribute_index = 2
-                '''
-                for item in parsed_query:
-                    if(parsed_query.index(item) % 4 == 0):
-                        keyword_list.append(parsed_query[keyword_index])
-                        keyword_index += 4
-                    if(parsed_query.index(item) % 4 == 1):
-                        filter_by_list.append(parsed_query[filter_by_index])
-                        filter_by_list += 4
-                    if(parsed_query.index(item) % 4 == 2):
-                        attribute_list.append(parsed_query[attribute_index])
-                        attribute_list += 4
-                '''
-                for i in range(int(((len(parsed_query) - 3) / 4) + 1)):
-                    keyword_list.append(parsed_query[keyword_index + (4 * i)])
-                    filter_by_list.append(parsed_query[filter_by_index + (4 * i)])
-                    attribute_list.append(parsed_query[attribute_index + (4 * i)])
-                print(keyword_list)
-                print(filter_by_list)
-                print(attribute_list)
-                get = "(self.db.collection('SmithAthletes')"
-                for i in range(int(((len(parsed_query) - 3) / 4) + 1)):
-                    test_string = ".where(" + keyword_list[i] + ", " + filter_by_list[i] + ", " + attribute_list[i] + ")"
-                    get = get + test_string
-                get = get + ".stream()"
-                
-            for doc in docs:
+            # For each instance of query add a filter component (i.e 'Sport == Football' is one instance)
+            for i in range(int(((len(parsed_query) - 3) / 4) + 1)):
 
-                # Get the filtered items in a dictionary
-                results = doc.to_dict()
+                # Verify that the operator is valid
+                if (not self.verify_filter(parsed_query[filter_by_index + (4 * i)])):
+                    return "Unknown operator."
 
-                # Only take the first name and append "Smith"
-                list_item = results["First Name"] + " Smith"
+                # Add component to the list
+                get_list.append(
+                    f'.where("{parsed_query[keyword_index + (4 * i)]}", "{parsed_query[filter_by_index + (4 * i)]}", "{parsed_query[attribute_index + (4 * i)]}")')
 
-                # Append to the list
-                list.append(list_item)
+            # Add final component to the list
+            get_list.append('.stream()')
 
-            if len(list) == 0:
-                message = "None"
+            # Join the list into a string
+            get = ''.join(get_list)
 
-                return message
+            # Evaluate the expression
+            docs = eval(get)
 
-            # Print items back to the user
-            for i in range(len(list) - 1):
-                output_string = output_string + str(list[i]) + ", "
+        else:
+            return "Wrong input. Try again"
 
-            output_string = output_string + list[len(list) - 1]
+        # Create a list to hold values
+        list = []
 
-            return output_string
+        # Create string to return to user
+        output_string = ""
+
+        for doc in docs:
+            # Get the filtered items in a dictionary
+            results = doc.to_dict()
+
+            # Only take the first name and append "Smith"
+            list_item = results["First Name"] + " Smith"
+
+            # Append to the list
+            list.append(list_item)
+
+        # Handle no matching data
+        if len(list) == 0:
+            message = "None"
+
+            return message
+
+        # Print items back to the user
+        for i in range(len(list) - 1):
+            # Join items into a string
+            output_string = output_string + str(list[i]) + ", "
+
+        # Join the final item to the list
+        output_string = output_string + list[len(list) - 1]
+
+        return output_string
 
     def get_query_from_user(self):
         user_input = input("->  ")
