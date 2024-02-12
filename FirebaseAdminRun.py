@@ -22,8 +22,8 @@ collection_ref = db.collection('SmithAthletes')
 
 # Iterate through the JSON data and update the documents in the collection
 for item in smithAthletes:
-    # Use the 'Unique id' as the document ID
-    unique_id = str(item['Unique id'])
+    # Use the 'id' as the document ID
+    unique_id = str(item['id'])
     doc_ref = collection_ref.document(unique_id)
     # Set the document with the rest of the data
     doc_ref.set(item)
