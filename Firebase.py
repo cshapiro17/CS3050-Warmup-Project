@@ -14,11 +14,12 @@ class Firebase:
         self.db = firestore.client()
         self.collection_ref = self.db.collection(COLLECTION)
 
-    def connect(self):
-        pass
-        
     def retrieve_all_data(self):
-         return self.collection_ref.get()
+        """
+        Retrieves everything from database
+        :return 
+        """
+        return self.collection_ref.get()
 
     def process_query(self, parsed_query):
 
@@ -30,8 +31,9 @@ class Firebase:
         if len(parsed_query) == 1:
             if keyword == "help":
                 message = "This is a help message"
-
                 return message
+            elif keyword == "*":
+                pass
 
         # Handle queries of any length
         elif (len(parsed_query) - 3) % 4 == 0:
@@ -103,19 +105,29 @@ class Firebase:
         return output_string
 
     def get_query_from_user(self):
+        """
+        Gets the query input from the user
+        :return user_input, str
+        """
         user_input = input("->  ")
 
         return user_input
     
     def get_column_titles(self):
+        """
+        Gets the column titles from the database
+        :return columns: list of all column names
+        """
         # Pull data from firebase
         docs = self.retrieve_all_data()
 
+        # Get the first item to a dictionary
         column_dict = dict()
         for item in docs:
             column_dict = item.to_dict()
             break
 
+        # loop through dictionary and add all the keys to columns list 
         columns = []
         for key, _ in column_dict.items():
             columns.append(key)
@@ -123,6 +135,12 @@ class Firebase:
         return columns
     
     def verify_keyword(self, keyword):
+        """
+        Checks the keyword given is a valid colum name
+        :param keyword: column name given by user
+        :type keyword: str
+        :return boolean
+        """
         columns = self.get_column_titles()
         
         if (keyword in columns):
@@ -131,6 +149,12 @@ class Firebase:
         return False    
         
     def verify_filter(self, filter_by):
+        """
+        Checks the filter given is a valid operator
+        :param filter_by: operator given by user
+        :type keyword: str
+        :return boolean
+        """
         valid_filter = ["<", "<=", "==", '>', '>=', '!=', 'array-contains', 'array-contains-any', 'in', 'not-in']
 
         if (filter_by in valid_filter):
