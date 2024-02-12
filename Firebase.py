@@ -20,13 +20,11 @@ class Firebase:
 
         if (len(parsed_query) == 1 and (keyword == "help" or keyword == "*")):
             if keyword == "help":
-                # define variables
-                help_file = "help.txt"
-                message = ""
-                f = open(help_file, 'r')
-                for line in help_file:
-                    print(line)
-                return ":)"
+                # Open help file and print its contents 
+                with open('help.txt', 'r') as file:
+                    file_content = file.read()
+                    print(file_content)
+                return "\n:)"
             elif keyword == "*":
                 self.print_all_data(self.retrieve_all_data())
                 return "\nAll items in data base disaplyed."
