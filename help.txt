@@ -1,0 +1,25 @@
+Here is a guide to our query language!
+ 
+Format for query:
+ 
+Standard query use: -> command operator attribute
+Example: -> sport == Football
+Example: -> championship >= 1
+ 
+Compound query use standard query format seperated by "and"/"or" for each instance of a query
+Example: -> sport == Football and championship >= 1
+Example: -> first_name == "Kenny Smith" or sport == Baseball
+ 
+To query all data use *
+Example: -> *
+ 
+Commands:
+ 
+first_name - the first name of the athlete
+team - the team of the athlete
+
+Operators:
+
+Attributes:
+
+These include the sport of the players, the birthday, the death date,  
