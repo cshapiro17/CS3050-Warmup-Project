@@ -1,7 +1,7 @@
 [
    {
-     "Unique id": 1,
-     "First Name": "Steve ",
+     "id": 1,
+     "first_name": "Steve",
      "Sport": "Football",
      "Birthdate": "May 12, 1979",
      "Team": "Baltimore Ravens",
@@ -9,8 +9,8 @@
      "Death Date": ""
    },
    {
-     "Unique id": 2,
-     "First Name": "Randy",
+     "id": 2,
+     "first_name": "Randy",
      "Sport": "Basketball",
      "Birthdate": "December 12, 1948",
      "Team": "Atlanta Hawks",
@@ -18,17 +18,17 @@
      "Death Date": "June 4, 2009"
    },
    {
-     "Unique id": 3,
-     "First Name": "Emmit",
+     "id": 3,
+     "first_name": "Emmit",
      "Sport": "Football",
      "Birthdate": "May 15, 1969",
-     "Team": "Arizona Cardinals ",
+     "Team": "Arizona Cardinals",
      "Championship": "3",
      "Death Date": ""
    },
    {
-     "Unique id": 4,
-     "First Name": "ZaDarius",
+     "id": 4,
+     "first_name": "ZaDarius",
      "Sport": "Football",
      "Birthdate": "September 8, 1992",
      "Team": "Cleveland Browns",
@@ -36,8 +36,8 @@
      "Death Date": ""
    },
    {
-     "Unique id": 5,
-     "First Name": "Vyncint",
+     "id": 5,
+     "first_name": "Vyncint",
      "Sport": "Football",
      "Birthdate": "June 9, 1996",
      "Team": "Indianapolis Colts",
@@ -45,8 +45,8 @@
      "Death Date": ""
    },
    {
-     "Unique id": 6,
-     "First Name": "Tyron",
+     "id": 6,
+     "first_name": "Tyron",
      "Sport": "Football",
      "Birthdate": "December 12, 1990",
      "Team": "Dallas Cowboys",
@@ -54,17 +54,17 @@
      "Death Date": ""
    },
    {
-     "Unique id": 7,
-     "First Name": "Tyreke",
+     "id": 7,
+     "first_name": "Tyreke",
      "Sport": "Football",
      "Birthdate": "February 14, 2000",
-     "Team": "Arizona Cardinals ",
+     "Team": "Arizona Cardinals",
      "Championship": "0",
      "Death Date": ""
    },
    {
-     "Unique id": 8,
-     "First Name": "Truett",
+     "id": 8,
+     "first_name": "Truett",
      "Sport": "Football",
      "Birthdate": "March 17, 1924",
      "Team": "Pittsburgh Steelers",
@@ -72,8 +72,8 @@
      "Death Date": "December 29, 2000"
    },
    {
-     "Unique id": 9,
-     "First Name": "Torrey",
+     "id": 9,
+     "first_name": "Torrey",
      "Sport": "Football",
      "Birthdate": "January 26, 1989",
      "Team": "Carolina Panthers",
@@ -81,8 +81,8 @@
      "Death Date": ""
    },
    {
-     "Unique id": 10,
-     "First Name": "TreQuan",
+     "id": 10,
+     "first_name": "TreQuan",
      "Sport": "Football",
      "Birthdate": "January 7, 1996",
      "Team": "Denver Broncos",
@@ -90,8 +90,8 @@
      "Death Date": ""
    },
    {
-     "Unique id": 11,
-     "First Name": "TJ",
+     "id": 11,
+     "first_name": "TJ",
      "Sport": "Football",
      "Birthdate": "April 19, 1997",
      "Team": "Minnesota Vikings",
@@ -99,8 +99,8 @@
      "Death Date": ""
    },
    {
-     "Unique id": 12,
-     "First Name": "Roquan",
+     "id": 12,
+     "first_name": "Roquan",
      "Sport": "Football",
      "Birthdate": "April 8, 1997",
      "Team": "Baltimore Ravens",
@@ -108,8 +108,8 @@
      "Death Date": ""
    },
    {
-     "Unique id": 13,
-     "First Name": "Noland",
+     "id": 13,
+     "first_name": "Noland",
      "Sport": "Football",
      "Birthdate": "October 20, 1943",
      "Team": "San Francisco 49ers",
@@ -117,8 +117,8 @@
      "Death Date": ""
    },
    {
-     "Unique id": 14,
-     "First Name": "Katie",
+     "id": 14,
+     "first_name": "Katie",
      "Sport": "Basketball",
      "Birthdate": "June 4, 1974",
      "Team": "New York Liberty",
@@ -126,8 +126,8 @@
      "Death Date": ""
    },
    {
-     "Unique id": 15,
-     "First Name": "JR",
+     "id": 15,
+     "first_name": "JR",
      "Sport": "Basketball",
      "Birthdate": "September 9, 1985",
      "Team": "Los Angeles Lakers",
@@ -135,8 +135,8 @@
      "Death Date": ""
    },
    {
-     "Unique id": 16,
-     "First Name": "Burch",
+     "id": 16,
+     "first_name": "Burch",
      "Sport": "Baseball",
      "Birthdate": "April 12, 1990",
      "Team": "Tampa Bay Rays",
@@ -144,17 +144,17 @@
      "Death Date": ""
    },
    {
-     "Unique id": 17,
-     "First Name": "Tommie",
-     "Sport": "Track and Field ",
+     "id": 17,
+     "first_name": "Tommie",
+     "Sport": "Track and Field",
      "Birthdate": "June 6, 1944",
      "Team": "USA",
      "Championship": "1",
      "Death Date": ""
    },
    {
-     "Unique id": 18,
-     "First Name": "Dennis",
+     "id": 18,
+     "first_name": "Dennis",
      "Sport": "Football",
      "Birthdate": "Feb 3 1959",
      "Team": "Denver Broncos",
@@ -162,8 +162,8 @@
      "Death Date": ""
    },
    {
-     "Unique id": 19,
-     "First Name": "Robby",
+     "id": 19,
+     "first_name": "Robby",
      "Sport": "Wrestling",
      "Birthdate": "01/30/1987",
      "Team": "USA",
@@ -171,17 +171,17 @@
      "Death Date": ""
    },
    {
-     "Unique id": 20,
-     "First Name": "Bubba",
+     "id": 20,
+     "first_name": "Bubba",
      "Sport": "Football",
      "Birthdate": "02/28/1945",
-     "Team": "Michigan State University ",
+     "Team": "Michigan State University",
      "Championship": "0",
      "Death Date": "08/03/2011"
    },
    {
-     "Unique id": 21,
-     "First Name": "Mark",
+     "id": 21,
+     "first_name": "Mark",
      "Sport": "Baseball",
      "Birthdate": "May 7, 1970",
      "Team": "Milwaukee Brewers",
@@ -189,8 +189,8 @@
      "Death Date": ""
    },
    {
-     "Unique id": 22,
-     "First Name": "David",
+     "id": 22,
+     "first_name": "David",
      "Sport": "Volleyball",
      "Birthdate": "May 15, 1985",
      "Team": "USA",
@@ -198,8 +198,8 @@
      "Death Date": ""
    },
    {
-     "Unique id": 23,
-     "First Name": "Will",
+     "id": 23,
+     "first_name": "Will",
      "Sport": "Baseball",
      "Birthdate": "7/10/1989",
      "Team": "Kansas City Royals",
@@ -207,17 +207,17 @@
      "Death Date": ""
    },
    {
-     "Unique id": 24,
-     "First Name": "Reggie",
+     "id": 24,
+     "first_name": "Reggie",
      "Sport": "Baseball",
      "Birthdate": "02/04/1945",
-     "Team": "Los Angeles Dodgers ",
+     "Team": "Los Angeles Dodgers",
      "Championship": "2",
      "Death Date": ""
    },
    {
-     "Unique id": 25,
-     "First Name": "Bruce",
+     "id": 25,
+     "first_name": "Bruce",
      "Sport": "Football",
      "Birthdate": "06/18/1943",
      "Team": "Buffalo Bills",
@@ -225,8 +225,8 @@
      "Death Date": ""
    },
    {
-     "Unique id": 26,
-     "First Name": "Ben",
+     "id": 26,
+     "first_name": "Ben",
      "Sport": "Football",
      "Birthdate": "June 16, 1911",
      "Team": "Washington Redskins",
@@ -234,8 +234,8 @@
      "Death Date": "February 23, 1941"
    },
    {
-     "Unique id": 27,
-     "First Name": "Will",
+     "id": 27,
+     "first_name": "Will",
      "Sport": "Baseball",
      "Birthdate": "03/28/1995",
      "Team": "Los Angeles Dodgers",
@@ -243,8 +243,8 @@
      "Death Date": ""
    },
    {
-     "Unique id": 28,
-     "First Name": "Alex",
+     "id": 28,
+     "first_name": "Alex",
      "Sport": "Football",
      "Birthdate": "04/07/1984",
      "Team": "Washington Redskins",
@@ -252,8 +252,8 @@
      "Death Date": ""
    },
    {
-     "Unique id": 29,
-     "First Name": "Steve",
+     "id": 29,
+     "first_name": "Steve",
      "Sport": "Basketball",
      "Birthdate": "March 31, 1969",
      "Team": "Miami Heat",
@@ -261,8 +261,8 @@
      "Death Date": ""
    },
    {
-     "Unique id": 30,
-     "First Name": "Josh",
+     "id": 30,
+     "first_name": "Josh",
      "Sport": "Basketball",
      "Birthdate": "December 5, 1985",
      "Team": "New Orleans Pelicans",
@@ -270,8 +270,8 @@
      "Death Date": ""
    },
    {
-    "Unique id": 31,
-    "First Name": "Phil",
+    "id": 31,
+    "first_name": "Phil",
     "Sport": "Basketball",
     "Birthdate": "April 22, 1952",
     "Team": "Seattle Supersonics",
@@ -279,8 +279,8 @@
     "Death Date": "July 29, 2002"
    },
    {
-    "Unique id": 32,
-    "First Name": "Kenny",
+    "id": 32,
+    "first_name": "Kenny",
     "Sport": "Basketball",
     "Birthdate": "March 8, 1965",
     "Team": "Denver Nuggets",
