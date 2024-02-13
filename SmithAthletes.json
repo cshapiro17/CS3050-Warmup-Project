@@ -2,289 +2,289 @@
    {
      "id": 1,
      "first_name": "Steve",
-     "Sport": "Football",
-     "Birthdate": "May 12, 1979",
-     "Team": "Baltimore Ravens",
-     "Championship": "0",
-     "Death Date": ""
+     "sport": "Football",
+     "birth_date": "May 12, 1979",
+     "team": "Baltimore Ravens",
+     "championship": "0",
+     "death_date": ""
    },
    {
      "id": 2,
      "first_name": "Randy",
-     "Sport": "Basketball",
-     "Birthdate": "December 12, 1948",
-     "Team": "Atlanta Hawks",
-     "Championship": "0",
-     "Death Date": "June 4, 2009"
+     "sport": "Basketball",
+     "birth_date": "December 12, 1948",
+     "team": "Atlanta Hawks",
+     "championship": "0",
+     "death_date": "June 4, 2009"
    },
    {
      "id": 3,
      "first_name": "Emmit",
-     "Sport": "Football",
-     "Birthdate": "May 15, 1969",
-     "Team": "Arizona Cardinals",
-     "Championship": "3",
-     "Death Date": ""
+     "sport": "Football",
+     "birth_date": "May 15, 1969",
+     "team": "Arizona Cardinals",
+     "championship": "3",
+     "death_date": ""
    },
    {
      "id": 4,
      "first_name": "ZaDarius",
-     "Sport": "Football",
-     "Birthdate": "September 8, 1992",
-     "Team": "Cleveland Browns",
-     "Championship": "0",
-     "Death Date": ""
+     "sport": "Football",
+     "birth_date": "September 8, 1992",
+     "team": "Cleveland Browns",
+     "championship": "0",
+     "death_date": ""
    },
    {
      "id": 5,
      "first_name": "Vyncint",
-     "Sport": "Football",
-     "Birthdate": "June 9, 1996",
-     "Team": "Indianapolis Colts",
-     "Championship": "0",
-     "Death Date": ""
+     "sport": "Football",
+     "birth_date": "June 9, 1996",
+     "team": "Indianapolis Colts",
+     "championship": "0",
+     "death_date": ""
    },
    {
      "id": 6,
      "first_name": "Tyron",
-     "Sport": "Football",
-     "Birthdate": "December 12, 1990",
-     "Team": "Dallas Cowboys",
-     "Championship": "0",
-     "Death Date": ""
+     "sport": "Football",
+     "birth_date": "December 12, 1990",
+     "team": "Dallas Cowboys",
+     "championship": "0",
+     "death_date": ""
    },
    {
      "id": 7,
      "first_name": "Tyreke",
-     "Sport": "Football",
-     "Birthdate": "February 14, 2000",
-     "Team": "Arizona Cardinals",
-     "Championship": "0",
-     "Death Date": ""
+     "sport": "Football",
+     "birth_date": "February 14, 2000",
+     "team": "Arizona Cardinals",
+     "championship": "0",
+     "death_date": ""
    },
    {
      "id": 8,
      "first_name": "Truett",
-     "Sport": "Football",
-     "Birthdate": "March 17, 1924",
-     "Team": "Pittsburgh Steelers",
-     "Championship": "0",
-     "Death Date": "December 29, 2000"
+     "sport": "Football",
+     "birth_date": "March 17, 1924",
+     "team": "Pittsburgh Steelers",
+     "championship": "0",
+     "death_date": "December 29, 2000"
    },
    {
      "id": 9,
      "first_name": "Torrey",
-     "Sport": "Football",
-     "Birthdate": "January 26, 1989",
-     "Team": "Carolina Panthers",
-     "Championship": "2",
-     "Death Date": ""
+     "sport": "Football",
+     "birth_date": "January 26, 1989",
+     "team": "Carolina Panthers",
+     "championship": "2",
+     "death_date": ""
    },
    {
      "id": 10,
      "first_name": "TreQuan",
-     "Sport": "Football",
-     "Birthdate": "January 7, 1996",
-     "Team": "Denver Broncos",
-     "Championship": "0",
-     "Death Date": ""
+     "sport": "Football",
+     "birth_date": "January 7, 1996",
+     "team": "Denver Broncos",
+     "championship": "0",
+     "death_date": ""
    },
    {
      "id": 11,
      "first_name": "TJ",
-     "Sport": "Football",
-     "Birthdate": "April 19, 1997",
-     "Team": "Minnesota Vikings",
-     "Championship": "0",
-     "Death Date": ""
+     "sport": "Football",
+     "birth_date": "April 19, 1997",
+     "team": "Minnesota Vikings",
+     "championship": "0",
+     "death_date": ""
    },
    {
      "id": 12,
      "first_name": "Roquan",
-     "Sport": "Football",
-     "Birthdate": "April 8, 1997",
-     "Team": "Baltimore Ravens",
-     "Championship": "0",
-     "Death Date": ""
+     "sport": "Football",
+     "birth_date": "April 8, 1997",
+     "team": "Baltimore Ravens",
+     "championship": "0",
+     "death_date": ""
    },
    {
      "id": 13,
      "first_name": "Noland",
-     "Sport": "Football",
-     "Birthdate": "October 20, 1943",
-     "Team": "San Francisco 49ers",
-     "Championship": "0",
-     "Death Date": ""
+     "sport": "Football",
+     "birth_date": "October 20, 1943",
+     "team": "San Francisco 49ers",
+     "championship": "0",
+     "death_date": ""
    },
    {
      "id": 14,
      "first_name": "Katie",
-     "Sport": "Basketball",
-     "Birthdate": "June 4, 1974",
-     "Team": "New York Liberty",
-     "Championship": "2",
-     "Death Date": ""
+     "sport": "Basketball",
+     "birth_date": "June 4, 1974",
+     "team": "New York Liberty",
+     "championship": "2",
+     "death_date": ""
    },
    {
      "id": 15,
      "first_name": "JR",
-     "Sport": "Basketball",
-     "Birthdate": "September 9, 1985",
-     "Team": "Los Angeles Lakers",
-     "Championship": "2",
-     "Death Date": ""
+     "sport": "Basketball",
+     "birth_date": "September 9, 1985",
+     "team": "Los Angeles Lakers",
+     "championship": "2",
+     "death_date": ""
    },
    {
      "id": 16,
      "first_name": "Burch",
-     "Sport": "Baseball",
-     "Birthdate": "April 12, 1990",
-     "Team": "Tampa Bay Rays",
-     "Championship": "0",
-     "Death Date": ""
+     "sport": "Baseball",
+     "birth_date": "April 12, 1990",
+     "team": "Tampa Bay Rays",
+     "championship": "0",
+     "death_date": ""
    },
    {
      "id": 17,
      "first_name": "Tommie",
-     "Sport": "Track and Field",
-     "Birthdate": "June 6, 1944",
-     "Team": "USA",
-     "Championship": "1",
-     "Death Date": ""
+     "sport": "Track and Field",
+     "birth_date": "June 6, 1944",
+     "team": "USA",
+     "championship": "1",
+     "death_date": ""
    },
    {
      "id": 18,
      "first_name": "Dennis",
-     "Sport": "Football",
-     "Birthdate": "Feb 3 1959",
-     "Team": "Denver Broncos",
-     "Championship": "0",
-     "Death Date": ""
+     "sport": "Football",
+     "birth_date": "Feb 3 1959",
+     "team": "Denver Broncos",
+     "championship": "0",
+     "death_date": ""
    },
    {
      "id": 19,
      "first_name": "Robby",
-     "Sport": "Wrestling",
-     "Birthdate": "01/30/1987",
-     "Team": "USA",
-     "Championship": "0",
-     "Death Date": ""
+     "sport": "Wrestling",
+     "birth_date": "01/30/1987",
+     "team": "USA",
+     "championship": "0",
+     "death_date": ""
    },
    {
      "id": 20,
      "first_name": "Bubba",
-     "Sport": "Football",
-     "Birthdate": "02/28/1945",
-     "Team": "Michigan State University",
-     "Championship": "0",
-     "Death Date": "08/03/2011"
+     "sport": "Football",
+     "birth_date": "02/28/1945",
+     "team": "Michigan State University",
+     "championship": "0",
+     "death_date": "08/03/2011"
    },
    {
      "id": 21,
      "first_name": "Mark",
-     "Sport": "Baseball",
-     "Birthdate": "May 7, 1970",
-     "Team": "Milwaukee Brewers",
-     "Championship": "0",
-     "Death Date": ""
+     "sport": "Baseball",
+     "birth_date": "May 7, 1970",
+     "team": "Milwaukee Brewers",
+     "championship": "0",
+     "death_date": ""
    },
    {
      "id": 22,
      "first_name": "David",
-     "Sport": "Volleyball",
-     "Birthdate": "May 15, 1985",
-     "Team": "USA",
-     "Championship": "0",
-     "Death Date": ""
+     "sport": "Volleyball",
+     "birth_date": "May 15, 1985",
+     "team": "USA",
+     "championship": "0",
+     "death_date": ""
    },
    {
      "id": 23,
      "first_name": "Will",
-     "Sport": "Baseball",
-     "Birthdate": "7/10/1989",
-     "Team": "Kansas City Royals",
-     "Championship": "0",
-     "Death Date": ""
+     "sport": "Baseball",
+     "birth_date": "7/10/1989",
+     "team": "Kansas City Royals",
+     "championship": "0",
+     "death_date": ""
    },
    {
      "id": 24,
      "first_name": "Reggie",
-     "Sport": "Baseball",
-     "Birthdate": "02/04/1945",
-     "Team": "Los Angeles Dodgers",
-     "Championship": "2",
-     "Death Date": ""
+     "sport": "Baseball",
+     "birth_date": "02/04/1945",
+     "team": "Los Angeles Dodgers",
+     "championship": "2",
+     "death_date": ""
    },
    {
      "id": 25,
      "first_name": "Bruce",
-     "Sport": "Football",
-     "Birthdate": "06/18/1943",
-     "Team": "Buffalo Bills",
-     "Championship": "0",
-     "Death Date": ""
+     "sport": "Football",
+     "birth_date": "06/18/1943",
+     "team": "Buffalo Bills",
+     "championship": "0",
+     "death_date": ""
    },
    {
      "id": 26,
      "first_name": "Ben",
-     "Sport": "Football",
-     "Birthdate": "June 16, 1911",
-     "Team": "Washington Redskins",
-     "Championship": "1",
-     "Death Date": "February 23, 1941"
+     "sport": "Football",
+     "birth_date": "June 16, 1911",
+     "team": "Washington Redskins",
+     "championship": "1",
+     "death_date": "February 23, 1941"
    },
    {
      "id": 27,
      "first_name": "Will",
-     "Sport": "Baseball",
-     "Birthdate": "03/28/1995",
-     "Team": "Los Angeles Dodgers",
-     "Championship": "0",
-     "Death Date": ""
+     "sport": "Baseball",
+     "birth_date": "03/28/1995",
+     "team": "Los Angeles Dodgers",
+     "championship": "0",
+     "death_date": ""
    },
    {
      "id": 28,
      "first_name": "Alex",
-     "Sport": "Football",
-     "Birthdate": "04/07/1984",
-     "Team": "Washington Redskins",
-     "Championship": "0",
-     "Death Date": ""
+     "sport": "Football",
+     "birth_date": "04/07/1984",
+     "team": "Washington Redskins",
+     "championship": "0",
+     "death_date": ""
    },
    {
      "id": 29,
      "first_name": "Steve",
-     "Sport": "Basketball",
-     "Birthdate": "March 31, 1969",
-     "Team": "Miami Heat",
-     "Championship": "1",
-     "Death Date": ""
+     "sport": "Basketball",
+     "birth_date": "March 31, 1969",
+     "team": "Miami Heat",
+     "championship": "1",
+     "death_date": ""
    },
    {
      "id": 30,
      "first_name": "Josh",
-     "Sport": "Basketball",
-     "Birthdate": "December 5, 1985",
-     "Team": "New Orleans Pelicans",
-     "Championship": "0",
-     "Death Date": ""
+     "sport": "Basketball",
+     "birth_date": "December 5, 1985",
+     "team": "New Orleans Pelicans",
+     "championship": "0",
+     "death_date": ""
    },
    {
     "id": 31,
     "first_name": "Phil",
-    "Sport": "Basketball",
-    "Birthdate": "April 22, 1952",
-    "Team": "Seattle Supersonics",
-    "Championship": "1",
-    "Death Date": "July 29, 2002"
+    "sport": "Basketball",
+    "birth_date": "April 22, 1952",
+    "team": "Seattle Supersonics",
+    "championship": "1",
+    "death_date": "July 29, 2002"
    },
    {
     "id": 32,
     "first_name": "Kenny",
-    "Sport": "Basketball",
-    "Birthdate": "March 8, 1965",
-    "Team": "Denver Nuggets",
-    "Championship": "2",
-    "Death Date": ""
+    "sport": "Basketball",
+    "birth_date": "March 8, 1965",
+    "team": "Denver Nuggets",
+    "championship": "2",
+    "death_date": ""
    }
   ]
