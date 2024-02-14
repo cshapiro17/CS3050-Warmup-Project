@@ -14,28 +14,25 @@ class Firebase:
         self.db = firestore.client()
         self.collection_ref = self.db.collection(COLLECTION)
 
-    def connect(self):
-        pass
-        
-    def retrieve_all_data(self):
-         return self.collection_ref.get()
-
     def process_query(self, parsed_query):
 
         # The keyword will always be the first value in the parsed query
         keyword = parsed_query[0]
 
-        # Determine if the keyword matches a query command
-        if (not self.verify_keyword(keyword)):
-            return "Command not found."
+        if (len(parsed_query) == 1 and (keyword == "help" or keyword == "*")):
+            if keyword == "help":
+                # Open help file and print its contents 
+                with open('help.txt', 'r') as file:
+                    file_content = file.read()
+                    print(file_content)
+                return "\n:)"
+            elif keyword == "*":
+                self.print_all_data(self.retrieve_all_data())
+                return "\nAll items in data base disaplyed."
 
-        if len(parsed_query) == 1:
-            
-            if keyword == "Help":
-                message = "this is a help message"
-
-                return message
-
+        elif (not self.verify_keyword(keyword)):
+            return "Column name not found."
+        
         # Handle queries of any length
         elif (len(parsed_query) - 3) % 4 == 0:
 
@@ -84,7 +81,7 @@ class Firebase:
             results = doc.to_dict()
 
             # Only take the first name and append "Smith"
-            list_item = results["First Name"] + " Smith"
+            list_item = results["first_name"] + " Smith"
 
             # Append to the list
             list.append(list_item)
@@ -106,26 +103,42 @@ class Firebase:
         return output_string
 
     def get_query_from_user(self):
+        """
+        Gets the query input from the user
+        :return user_input, str
+        """
         user_input = input("->  ")
 
         return user_input
     
     def get_column_titles(self):
+        """
+        Gets the column titles from the database
+        :return columns: list of all column names
+        """
         # Pull data from firebase
-        docs = self.retrieve_all_data()
+        column_dict = self.retrieve_all_data()
 
-        column_dict = dict()
-        for item in docs:
-            column_dict = item.to_dict()
-            break
+        # # Get the first item to a dictionary
+        # column_dict = dict()
+        # for item in docs:
+        #     column_dict = item.to_dict()
+        #     break
 
+        # # loop through dictionary and add all the keys to columns list 
         columns = []
-        for key, _ in column_dict.items():
+        for key, _ in column_dict[0].items():
             columns.append(key)
         
         return columns
     
     def verify_keyword(self, keyword):
+        """
+        Checks the keyword given is a valid colum name
+        :param keyword: column name given by user
+        :type keyword: str
+        :return boolean
+        """
         columns = self.get_column_titles()
         
         if (keyword in columns):
@@ -134,11 +147,46 @@ class Firebase:
         return False    
         
     def verify_filter(self, filter_by):
+        """
+        Checks the filter given is a valid operator
+        :param filter_by: operator given by user
+        :type keyword: str
+        :return boolean
+        """
         valid_filter = ["<", "<=", "==", '>', '>=', '!=', 'array-contains', 'array-contains-any', 'in', 'not-in']
 
         if (filter_by in valid_filter):
             return True
         return False
+    
+    def retrieve_all_data(self):
+        """
+        Retrieves everything from database, converts each item to a dictionary and adds it to a list
+        :return list_of_dict: list where each item in list is dictionary 
+        """
+        docs = self.collection_ref.get()
+        list_of_dict = []
+        for item in docs:
+            list_of_dict.append(item.to_dict())
+        return list_of_dict
+    
+    def print_all_data(self, list_of_dict):
+        """
+        Prints all the data in the following format:
+        Team: Dallas Cowboys
+        first_name: Tyron
+        id: 6
+        Birthdate: December 12, 1990
+        Sport: Football
+        Death Date: 
+        Championship: 0
+
+        :param list_of_dict: list of dictionaries of 
+        """
+        for item in list_of_dict:
+            print("")
+            for key, value in item.items():
+                print(str(key) + ": " + str(value))
         
 
         

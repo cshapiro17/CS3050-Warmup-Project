@@ -1,19 +1,39 @@
 Here is a guide to our query language!
-
+ 
 Format for query:
-
-Standard query use "command" "operator" "attribute"
+ 
+Standard query use: ->  command operator attribute
 Example: ->  sport == Football
 Example: ->  championship >= 1
-
-Compound query use standard query format seperated by "and" for each instance of a query
+ 
+Compound query use standard query format seperated by "and"/"or" for each instance of a query
 Example: ->  sport == Football and championship >= 1
-Example: ->  first_name == "Kenny Smith" and 
-
+Example: ->  first_name == "Kenny Smith" or sport == Baseball
+ 
 To query all data use *
 Example: ->  *
+ 
+COMMANDS:
+ 
+first_name - the first name of the athlete, format: Name (the first letter is capitalized)
+team - the team of the athlete, format: Team Name (the first letter of each word is capitalized and words are separated by spaces)
+birth_date - the birthday, format: Month Day, Year (the first letter of the month is capitalized, the day and year are both integers separated by a comma)
+championship - the amount of championships an athlete has won, format: number(integer)
+death_date - this is an optional data type that only some athletes have because many of the athletes listed are still alive, format: see birth_date
+id - this is the unique id that corresponds to the row of the database that the athletes information is saved in, format: number (integer)
+sport - the sport of the player, format: Sport (first letter is capitalized)
 
-Commands:
+OPERATORS:
 
-first_name - the first name of the athlete
-team - the team of the athlete
+the operators include: "<", "<=", "==", '>', '>=', '!=', 'array-contains', 'array-contains-any', 'in', 'not-in'
+All the greater than, less than, and eqal to operators work the same as they do in any other form of math. They can compare any attributes. The other operators are built in firebase operators and specifications can be found at this link: https://firebase.google.com/docs/firestore/query-data/queries .
+
+ATTRIBUTES:
+
+Attributes are specific instances of commands.
+- attributes of sport would be Baseball, Basketball, Track and Field, ect. 
+- attributes of birth_date and death_date are specific dates. 
+- attributes of championship and id are integers
+- attributes of team are sports teams such as New York Liberty or Los Angeles Lakers
+*** all attributes must be entered in the format specified in the commands section above
+ 
