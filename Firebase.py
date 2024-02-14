@@ -22,14 +22,17 @@ class Firebase:
 
     def process_query(self, parsed_query):
 
+        # The keyword will always be the first value in the parsed query
         keyword = parsed_query[0]
 
+        # Determine if the keyword matches a query command
         if (not self.verify_keyword(keyword)):
-            return "Column name not found."
+            return "Command not found."
 
         if len(parsed_query) == 1:
-            if keyword == "help":
-                message = "This is a help message"
+            
+            if keyword == "Help":
+                message = "this is a help message"
 
                 return message
 
