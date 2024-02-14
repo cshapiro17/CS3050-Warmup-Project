@@ -1,6 +1,8 @@
 import firebase_admin # if gettting error run in cmd: pip3 install firebase_admin
 from firebase_admin import firestore, credentials
 
+from google.cloud.firestore_v1.base_query import FieldFilter
+
 COLLECTION = 'SmithAthletes'
 
 class Firebase:
@@ -15,6 +17,10 @@ class Firebase:
         self.collection_ref = self.db.collection(COLLECTION)
 
     def process_query(self, parsed_query):
+        """
+        Gets the parsed query from the parser
+        :return output_string: formatted output to user
+        """
 
         # The keyword will always be the first value in the parsed query
         keyword = parsed_query[0]
@@ -56,7 +62,7 @@ class Firebase:
 
                 # Add component to the list
                 get_list.append(
-                    f'.where("{parsed_query[keyword_index + (4 * i)]}", "{parsed_query[filter_by_index + (4 * i)]}", "{parsed_query[attribute_index + (4 * i)]}")')
+                    f'.where(filter=FieldFilter("{parsed_query[keyword_index + (4 * i)]}", "{parsed_query[filter_by_index + (4 * i)]}", "{parsed_query[attribute_index + (4 * i)]}"))')
 
             # Add final component to the list
             get_list.append('.stream()')
@@ -68,7 +74,7 @@ class Firebase:
             docs = eval(get)
 
         else:
-            return "Wrong input. Try again"
+            return "Wrong input. Try again. Use the 'help' keyword for a guide to the query language."
 
         # Create a list to hold values
         list = []
@@ -81,7 +87,7 @@ class Firebase:
             results = doc.to_dict()
 
             # Only take the first name and append "Smith"
-            list_item = results["first_name"] + " Smith"
+            list_item = results["name"] + " Smith"
 
             # Append to the list
             list.append(list_item)
@@ -89,7 +95,6 @@ class Firebase:
         # Handle no matching data
         if len(list) == 0:
             message = "None"
-
             return message
 
         # Print items back to the user
@@ -128,6 +133,7 @@ class Firebase:
         # # loop through dictionary and add all the keys to columns list 
         columns = []
         for key, _ in column_dict[0].items():
+            print(key)
             columns.append(key)
         
         return columns
