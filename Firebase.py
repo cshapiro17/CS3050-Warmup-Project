@@ -54,6 +54,10 @@ class Firebase:
             # Create a list to hold the get data expression components
             get_list = []
 
+            keyword_list = []
+            filter_by_list = []
+            operator_list = ["<", ">", "<=", ">="]
+
             # Add first component to the list
             get_list.append(f'self.db.collection("{COLLECTION}")')
 
@@ -63,10 +67,18 @@ class Firebase:
                 # Verify that the operator is valid
                 if (not self.verify_filter(parsed_query[filter_by_index + (4 * i)])):
                     return "Unknown operator."
+                
+                keyword_list.append(parsed_query[keyword_index + (4 * i)])
+                filter_by_list.append(parsed_query[filter_by_index + (4 * i)])
 
                 # Add component to the list
                 get_list.append(
                     f'.where(filter=FieldFilter("{parsed_query[keyword_index + (4 * i)]}", "{parsed_query[filter_by_index + (4 * i)]}", "{parsed_query[attribute_index + (4 * i)]}"))')
+
+            # Check to make sure that the range operators are being used correctly
+            if (any(item in operator_list for item in filter_by_list)):
+                if (self.check_same_column(keyword_list) == False):
+                    return "Can not use operator with different columns"
 
             # Add final component to the list
             get_list.append('.stream()')
@@ -198,6 +210,13 @@ class Firebase:
             for key, value in item.items():
                 print(str(key) + ": " + str(value))
         
+    def check_same_column(self, list):
+
+        """
+        Checks if all keywords in the query are the same item
+        :return boolean
+        """
+        return len(set(list)) == 1
 
         
             
