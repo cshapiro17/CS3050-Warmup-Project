@@ -22,7 +22,11 @@ class Firebase:
         :return output_string: formatted output to user
         """
 
-        # The keyword will always be the first value in the parsed query
+        # Determine if there is any input at all
+        if (len(parsed_query) == 0):
+            return "No input. Please enter a command."
+        
+        # Obtain the keyword of the query
         keyword = parsed_query[0]
 
         if (len(parsed_query) == 1 and (keyword == "help" or keyword == "*")):
@@ -133,7 +137,7 @@ class Firebase:
         # # loop through dictionary and add all the keys to columns list 
         columns = []
         for key, _ in column_dict[0].items():
-            print(key)
+
             columns.append(key)
         
         return columns
